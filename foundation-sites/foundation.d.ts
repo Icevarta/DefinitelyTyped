@@ -5,18 +5,18 @@
 
 /// <reference path="../jquery/jquery.d.ts"/>
 
-declare module FoundationSites {
+declare module Foundation {
 
     // http://foundation.zurb.com/sites/docs/abide.html#javascript-reference
     interface Abide {
-        requiredChedck(element:Object): boolean;
+        requiredCheck(element:Object): boolean;
         findLabel(element:Object): boolean;
         addErrorClasses(element:Object): void;
         removeErrorClasses(element:Object): void;
         validateInput(element:Object, form:Object): void;
         validateForm(element:Object): void;
         validateText(element:Object): boolean;
-        validateRadio(group:string): boolean;
+        validateRadio(group:String): boolean;
         resetForm($form:Object): void;
     }
 
@@ -42,7 +42,7 @@ declare module FoundationSites {
     interface IAbideOptions {
         slideSpeed?: number;
         multiOpen?: boolean;
-        patters?: IAbidePatterns;
+        patters?: Foundation.IAbidePatterns;
     }
 
     // http://foundation.zurb.com/sites/docs/accordion.html#javascript-reference
@@ -80,14 +80,14 @@ declare module FoundationSites {
     }
 
     interface IDrilldownOptions {
-        backButton?: string;
-        wrapper?: string
+        backButton?: String;
+        wrapper?: String
         closeOnClick?: boolean
     }
 
     // http://foundation.zurb.com/sites/docs/dropdown.html#javascript-reference
     interface Dropdown {
-        getPositionClass(): string;
+        getPositionClass(): String;
         open(): void;
         close(): void;
         toggle(): void;
@@ -99,7 +99,7 @@ declare module FoundationSites {
         hover?: boolean;
         vOffset?: number;
         hOffset?: number;
-        positionClass?: string;
+        positionClass?: String;
         trapFocus?: boolean;
         autoFocus?: boolean;
     }
@@ -115,9 +115,9 @@ declare module FoundationSites {
         hoverDelay?: number;
         clickOpen?: boolean;
         closingTime?: number;
-        alignments?: string;
-        verticalClasss?: string;
-        rightClasss?: string;
+        alignments?: String;
+        verticalClasss?: String;
+        rightClasss?: String;
     }
 
     // http://foundation.zurb.com/sites/docs/equalizer.html#javascript-reference
@@ -134,7 +134,7 @@ declare module FoundationSites {
 
     // http://foundation.zurb.com/sites/docs/interchange.html#javascript-reference
     interface Interchange {
-        replace(path:string): void;
+        replace(path:String): void;
         destroy(): void;
     }
 
@@ -151,9 +151,9 @@ declare module FoundationSites {
 
     interface IMagellanOptions {
         animationDuration?: number;
-        animationEasing?: string;
+        animationEasing?: String;
         threshold?: number;
-        activeClass?: string;
+        activeClass?: String;
         deepLinking?: boolean;
     }
 
@@ -168,12 +168,12 @@ declare module FoundationSites {
     interface IOffCanvasOptions {
         closeOnClick?: boolean;
         transitionTime?: number;
-        position?: string;
+        position?: String;
         forceTop?: boolean;
         isRevealed?: boolean;
-        revealOn?: string;
+        revealOn?: String;
         autoFocus?: boolean;
-        revealClass?: string;
+        revealClass?: String;
     }
 
     // http://foundation.zurb.com/sites/docs/orbit.html#javascript-reference
@@ -186,21 +186,21 @@ declare module FoundationSites {
     interface IOrbitOptions {
         bullets?: boolean;
         navButtons?: boolean;
-        animInFromRight?: string;
-        animOutToRight?: string;
-        animInFromLeft?: string;
-        animOutToLeft?: string;
+        animInFromRight?: String;
+        animOutToRight?: String;
+        animInFromLeft?: String;
+        animOutToLeft?: String;
         autoPlay?: boolean;
         timerDelay?: number;
         infiniteWrap?: boolean;
         swipe?: boolean;
         pauseOnHover?: boolean;
         accessible?: boolean;
-        containerClass?: string;
-        slideClass?: string;
-        boxOfBullets?: string;
-        nextClass?: string;
-        prevClass?: string;
+        containerClass?: String;
+        slideClass?: String;
+        boxOfBullets?: String;
+        nextClass?: String;
+        prevClass?: String;
     }
 
     // http://foundation.zurb.com/sites/docs/reveal.html#javascript-reference
@@ -212,8 +212,8 @@ declare module FoundationSites {
     }
 
     interface IRevealOptions {
-        animationIn?: string;
-        animationOut?: string;
+        animationIn?: String;
+        animationOut?: String;
         showDelay?: number;
         hideDelay?: number;
         closeOnClick?: boolean;
@@ -246,28 +246,28 @@ declare module FoundationSites {
         doubleSided?: boolean;
         decimal?: number;
         moveTime?: number;
-        disabledClass?: string;
+        disabledClass?: String;
     }
 
     // http://foundation.zurb.com/sites/docs/sticky.html#javascript-reference
     interface Sticky {
-        _pauseListeners(scrollListener:string): void;
+        _pauseListeners(scrollListener:String): void;
         _calc(checkSizes:boolean, scroll:number): void;
         destroy(): void;
         emCalc(number:any): void;
     }
 
     interface IStickyOptions {
-        container?: string;
-        stickTo?: string;
-        anchor?: string;
-        topAnchor?: string;
-        btmAnchor?: string;
+        container?: String;
+        stickTo?: String;
+        anchor?: String;
+        topAnchor?: String;
+        btmAnchor?: String;
         marginTop?: number;
         marginBottom?: number;
-        stickyOn?: string;
-        stickyClass?: string;
-        containerClass?: string;
+        stickyOn?: String;
+        stickyClass?: String;
+        containerClass?: String;
         checkEvery?: number;
     }
 
@@ -305,14 +305,14 @@ declare module FoundationSites {
         fadeInDuration?: number;
         fadeOutDuration?: number;
         disableHover?: boolean;
-        templateClasses?: string;
-        tooltipClass?: string;
-        triggerClass?: string;
-        showOn?: string;
-        template?: string;
-        tipText?: string;
+        templateClasses?: String;
+        tooltipClass?: String;
+        triggerClass?: String;
+        showOn?: String;
+        template?: String;
+        tipText?: String;
         clickOpen?: boolean;
-        positionClass?: string;
+        positionClass?: String;
         vOffset?: number;
         hOffset?:number;
     }
@@ -323,17 +323,17 @@ declare module FoundationSites {
     interface Box {
         ImNotTouchingYou(element:Object, parent?:Object, lrOnly?:boolean, tbOnly?:boolean): boolean;
         GetDimensions(element:Object): Object;
-        GetOffsets(element:Object, anchor:Object, position:string, vOffset:number, hOffset:number, isOverflow:boolean): Object;
+        GetOffsets(element:Object, anchor:Object, position:String, vOffset:number, hOffset:number, isOverflow:boolean): Object;
     }
 
     interface KeyBoard {
-        parseKey(event:any): string;
+        parseKey(event:any): String;
         findFocusable($element:Object): Object;
     }
 
     interface MediaQuery {
-        get(size:string): string;
-        atLeast(size:string): boolean;
+        get(size:String): String;
+        atLeast(size:String): boolean;
         queries:Array<any>;
         current:any;
     }
@@ -367,61 +367,61 @@ declare module FoundationSites {
         // TODO :extension on jQuery
     }
 
-    interface FoundationSitesStatic {
-        version : string;
+    interface FoundationStatic {
+        version : String;
 
         rtl(): boolean;
-        plugin(plugin:Object, name:string): void;
+        plugin(plugin:Object, name:String): void;
         registerPlugin(plugin:Object): void;
         unregisterPlugin(plugin:Object): void;
-        GetYoDigits(length:number, namespace?:string): string;
-        reflow(elem:Object, plugins?:Array<string>|string): void;
-        getFnName(fn:string): string;
-        transitionend(): string;
+        GetYoDigits(length:number, namespace?:String): String;
+        reflow(elem:Object, plugins?:Array<String>|String): void;
+        getFnName(fn:String): String;
+        transitionend(): String;
 
         util : {
             throttle(func:(...args:any[]) => any, delay:number): (...args:any[]) => any;
         };
         onImagesLoaded(images:Object, cb:Function): void;
 
-        Abide(element:Object, options?:IAbideOptions): Abide;
-        Accordion(element:Object, options?:IAccordionOptions): Accordion;
-        AccordionMenu(element:Object, options?:IAccordionMenuOptions): AccordionMenu;
-        DrillDown(element:Object, options?:IDrilldownOptions): Drilldown;
-        Dropdown(element:Object, options?:IDropdownOptions): Dropdown;
-        DropdownMenu(element:Object, options?:IDropdownMenuOptions): DropdownMenu;
-        Equalizer(element:Object, options?:IEqualizerOptions): Equalizer;
-        Interchange(element:Object, options?:IInterchangeOptions): Interchange;
-        Magellan(element:Object, options?:IMagellanOptions): Magellan;
-        OffCanvas(element:Object, options?:IOffCanvasOptions): OffCanvas;
-        Orbit(element:Object, options?:IOrbitOptions): Orbit;
-        Reveal(element:Object, options?:IRevealOptions): Reveal;
-        Slider(element:Object, options?:ISliderOptions): Slider;
-        Sticky(element:Object, options?:IStickyOptions): Sticky;
-        Tabs(element:Object, options?:ITabsOptions): Tabs;
-        Toggler(element:Object, options?:ITogglerOptions): Toggler;
-        Tooltip(element:Object, options?:ITooltipOptions): Tooltip;
+        Abide(element:Object, options?:IAbideOptions): Foundation.Abide;
+        Accordion(element:Object, options?:IAccordionOptions): Foundation.Accordion;
+        AccordionMenu(element:Object, options?:IAccordionMenuOptions): Foundation.AccordionMenu;
+        DrillDown(element:Object, options?:IDrilldownOptions): Foundation.Drilldown;
+        Dropdown(element:Object, options?:IDropdownOptions): Foundation.Dropdown;
+        DropdownMenu(element:Object, options?:IDropdownMenuOptions): Foundation.DropdownMenu;
+        Equalizer(element:Object, options?:IEqualizerOptions): Foundation.Equalizer;
+        Interchange(element:Object, options?:IInterchangeOptions): Foundation.Interchange;
+        Magellan(element:Object, options?:IMagellanOptions): Foundation.Magellan;
+        OffCanvas(element:Object, options?:IOffCanvasOptions): Foundation.OffCanvas;
+        Orbit(element:Object, options?:IOrbitOptions): Foundation.Orbit;
+        Reveal(element:Object, options?:IRevealOptions): Foundation.Reveal;
+        Slider(element:Object, options?:ISliderOptions): Foundation.Slider;
+        Sticky(element:Object, options?:IStickyOptions): Foundation.Sticky;
+        Tabs(element:Object, options?:ITabsOptions): Foundation.Tabs;
+        Toggler(element:Object, options?:ITogglerOptions): Foundation.Toggler;
+        Tooltip(element:Object, options?:ITooltipOptions): Foundation.Tooltip;
 
         // utils
-        Box: Box;
-        KeyBoard: KeyBoard;
-        MediaQuery: MediaQuery;
-        Motion: Motion;
-        Move: Move;
-        Nest: Nest;
-        Timer: Timer;
-        Touch: Touch;
-        Triggers: Triggers;
+        Box: Foundation.Box;
+        KeyBoard: Foundation.KeyBoard;
+        MediaQuery: Foundation.MediaQuery;
+        Motion: Foundation.Motion;
+        Move: Foundation.Move;
+        Nest: Foundation.Nest;
+        Timer: Foundation.Timer;
+        Touch: Foundation.Touch;
+        Triggers: Foundation.Triggers;
 
     }
 
 }
 
 interface JQuery {
-    foundation(method?:string|Array<any>) : JQuery;
+    foundation(method?:String|Array<any>) : JQuery;
 }
 
-declare var Foundation:FoundationSites.FoundationSitesStatic;
+declare var Foundation:Foundation.FoundationStatic;
 
 declare module "Foundation" {
     export = Foundation;
